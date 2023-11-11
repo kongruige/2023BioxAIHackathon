@@ -40,7 +40,7 @@ class BioinformaticsAgent:
         #     handle_parsing_errors=True,
         #     memory=self.memory
         # )
-        print(1)
+        print(self.memory)
         self.db = Chroma(persist_directory=persist_dir,
                   embedding_function=embedding)
 
@@ -85,4 +85,8 @@ class BioinformaticsAgent:
             print(source.metadata['source'])
             break
         return llm_response['result']
+
+
+bioinformatics_agent = BioinformaticsAgent()
+print(bioinformatics_agent)
 
