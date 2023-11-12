@@ -1,11 +1,28 @@
-# 2023BioxAIHackathon
-This is the repository for the EF 2023 Bio x AI Hackathon
+# BioVerse - Autonomous Virtual Biology Lab
+This is the repository for BioVerse submitted for EF 2023 Bio x AI Hackathon
 
-# Biology Experiments Orchestrator
 
 ## Overview
 
-The Biology Experiments Orchestrator is a project designed to streamline and automate biology experiments through the coordination of specialized research agents. These agents cover various aspects of the experimental process, including image analysis, experiment generation, execution, and information retrieval. Additionally, the system facilitates continuous improvement by periodically gathering feedback from users.
+BioVerse is an AI-powered virtual lab that simulates real-world biology research workflows through multi-agent conversations. Users can pose problems and receive guided assistance across literature discovery, experimental design, computational analysis, and results interpretation and paper writing.
+
+The goal of BioVerse is to streamline and automate biology research through the coordination of specialised research agents. These agents cover various aspects of the experimental process, including:
+
+1. Research Assistant - Helps with literature review, documentation, project coordination.
+2. Experimental Biologist - Designs and discusses hands-on wet lab experiments and protocols.
+3. Bioinformatician - Provides guidance on computational analysis and omics data workflows.
+4. Image Analyst - Assists with processing and extracting insights from microscopy imaging data.
+
+Additionally, the system facilitates continuous improvement by periodically gathering feedback from users.
+
+BioVerse aims to provide end-to-end support from early stages of research through publication. Users can pose problems, discuss experimental directions with the agents, collect resultant data, and receive computational analysis guidance. The goal is an autonomous and accessible virtual lab supporting open-ended life science research workflows.
+
+
+## Tech stack/Technical approach
+Langchain
+OpenAI
+ChromaDB: text embeddings were stored in a Vector Database
+Django
 
 ## Agents
 
@@ -38,6 +55,9 @@ The Biology Experiments Orchestrator is a project designed to streamline and aut
 - Periodically collects feedback from users to enhance system performance.
 - Incorporates user suggestions to improve agent functionalities.
 - Maintains a feedback loop to iteratively refine the overall user experience.
+
+##Summary
+BioVerse is a project designed to streamline and automate biology experiments through the coordination of specialized research agents. These agents cover various aspects of the experimental process, including image analysis, experiment generation, execution, and information retrieval. Additionally, the system facilitates continuous improvement by periodically gathering feedback from users.
 
 ## Usage
 
@@ -73,4 +93,7 @@ The Biology Experiments Orchestrator is a project designed to streamline and aut
    ```bash
    git clone https://github.com/your-username/biology-experiments-orchestrator.git
    cd biology-experiments-orchestrator
+
+# Team Contributors and Acknowledgements
+This repository was BioVerse submitted for the EF 2023 Bio x AI Hackathon. Thank you to Entrepreneur First for sponsoring the event. Team members: 
 
