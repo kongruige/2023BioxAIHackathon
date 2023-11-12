@@ -56,8 +56,7 @@ Django
 - Incorporates user suggestions to improve agent functionalities.
 - Maintains a feedback loop to iteratively refine the overall user experience.
 
-##Summary
-BioVerse is a project designed to streamline and automate biology experiments through the coordination of specialized research agents. These agents cover various aspects of the experimental process, including image analysis, experiment generation, execution, and information retrieval. Additionally, the system facilitates continuous improvement by periodically gathering feedback from users.
+
 
 ## Usage
 
@@ -85,6 +84,10 @@ BioVerse is a project designed to streamline and automate biology experiments th
 - [Library Name 1](link_to_library_1)
 - [Library Name 2](link_to_library_2)
 - ...
+
+
+## Summary
+BioVerse is a project designed to streamline and automate biology experiments through the coordination of specialized research agents. These agents cover various aspects of the experimental process, including image analysis, experiment generation, execution, and information retrieval. Additionally, the system facilitates continuous improvement by periodically gathering feedback from users.
 
 ## Installation
 
