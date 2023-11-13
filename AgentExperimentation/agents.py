@@ -25,68 +25,40 @@ experimentalist_database_dir = os.path.join(base_dir, 'ExperimentalistDatabase')
 image_analysis_database_dir = os.path.join(base_dir, 'ImageAnalystDatabase')
 research_assistant_database_dir = os.path.join(base_dir, 'ResearchAssistantDatabase')
 
+os.environ['OPENAI_API_KEY'] = getpass.getpass('OpenAI API Key:')
+
 
 class BioinformaticsAgent:
     def __init__(self,
                  llm=ChatOpenAI(model_name='gpt-4',temperature=0.1),
                  persist_dir=bioinformatics_database_dir,
                  embedding=OpenAIEmbeddings()):
-        self.memory = ConversationBufferMemory(memory_key="chat_history")
-        # self.agent = initialize_agent(
-        #     agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
-        #     llm=llm,
-        #     verbose=False,
-        #     max_iterations=10,
-        #     handle_parsing_errors=True,
-        #     memory=self.memory
-        # )
-        print(self.memory)
+        self.memory = ConversationBufferMemory(memory_key="chat_history",return_messages=True)
         self.db = Chroma(persist_directory=persist_dir,
                   embedding_function=embedding)
 
         self.retriever = self.db.as_retriever()
-        print(2)
-        self.qa_chain = ConversationalRetrievalChain.from_llm(
-                                                  llm=llm,
-                                                  chain_type="stuff",
-                                                  retriever=self.retriever,
-                                                  return_source_documents=True,
-                                                  verbose=True,
-                                                  memory=self.memory
-                                                  )
 
         self.template = """You the bioinformatician. You can help me with analyzing and interpreting biological data. 
         Your skills include statistical analysis, DNA/RNA sequencing analysis, designing bioinformatics workflows, 
         and providing guidance on best practices for computational biology research. Please help me analyze and make 
         sense of large-scale omics data.
-        Context: {context}
-        
-        
+        Chat History:
         {chat_history}
-        Human: {question}
-        Assistant:"""
-        print(3)
-        self.prompt = PromptTemplate(
-            input_variables=["context", "chat_history", "question"], template=self.template
-        )
+        Follow Up Input: {question}
+        Standalone question:"""
+        self.prompt = PromptTemplate.from_template(self.template)
         # Create the chain to answer questions
-        self.qa_chain = ConversationalRetrievalChain.from_llm(
-                                                              llm=llm,
-                                                              retriever=self.retriever,
-                                                              return_source_documents=True,
-                                                              memory=self.memory,
-                                                              combine_docs_chain_kwargs={'prompt': self.prompt}
-                                                              )
+        self.qa = ConversationalRetrievalChain.from_llm(
+                                                          llm=llm,
+                                                          retriever=self.retriever,
+                                                          memory=self.memory,
+                                                          condense_question_prompt=self.prompt
+                                      )
 
-    def invoke(self, query):
-        llm_response = self.qa_chain(query)
-        print('\n\nSources:')
-        for source in llm_response["source_documents"]:
-            print(source.metadata['source'])
-            break
-        return llm_response['result']
+    def invoke(self,query):
+        result = self.qa({"question":query})
+        return result['answer']
 
 
-bioinformatics_agent = BioinformaticsAgent()
-print(bioinformatics_agent)
 
