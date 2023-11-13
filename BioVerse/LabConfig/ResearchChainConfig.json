@@ -1,0 +1,70 @@
+{
+  "chain": [
+    {
+      "phase": "HypothesisGeneration",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "DetermineResearchOutput",
+      "phaseType": "SimplePhase",
+      "max_turn_step": -1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "LiteratureReview",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "False"
+    },
+    {
+      "phase": "ExperimentDesign",
+      "phaseType": "SimplePhase",
+      "cycleNum": 10
+    },
+    {
+      "phase": "AutomateExperiment",
+      "phaseType": "ComposedPhase",
+      "cycleNum": 3
+    },
+    {
+      "phase": "ImageAnalysis",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "BioDataAnalysis",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "ValidateHypothesis",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "True"
+    },
+    {
+      "phase": "WriteScientificReport",
+      "phaseType": "SimplePhase",
+      "max_turn_step": 1,
+      "need_reflect": "True"
+    }
+  ],
+  "recruitments": [
+    "Principal Investigator",
+    "Bioinformatician",
+    "Research Assistant",
+    "Image Analyst",
+    "Experimentatlist", 
+    "Tissue Engineer"
+  ],
+  "clear_structure": "True",
+  "brainstorming": "False",
+  "gui_design": "True",
+  "git_management": "False",
+  "self_improve": "False",
+  "incremental_develop": "False"
+}
