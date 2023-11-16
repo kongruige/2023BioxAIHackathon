@@ -16,35 +16,20 @@ Welcome to the GitHub repository for BioVerse, an innovative project that earned
 - Bioinformatician - Provides guidance on computational analysis and omics data workflows.
 - Image Analyst - Assists with processing and extracting insights from microscopy imaging data.
 
-
-## Usage
-1. **Configuration:**
-   - Adjust agent parameters and configurations based on experimental requirements.
-
-2. **Experiment Setup:**
-   - Use the Experiment Generation Agent to create customized experimental protocols.
-
-3. **Execution:**
-   - Deploy the Experiment Execution Agent to carry out the experiments in the laboratory.
-
-4. **Analysis:**
-   - Leverage the Image Analysis Agent to process and analyze acquired experimental data.
-
-5. **Data Retrieval:**
-   - Utilize the Information Retrieval Agent to access and retrieve experiment results.
-
-6. **Feedback:**
-   - Provide feedback through the designated channels to improve system performance.
-
-
 ## Installation
-
-1. Clone the repository:
-
+- Clone the repository: 
    ```bash
    git clone https://github.com/your-username/biology-experiments-orchestrator.git
    cd biology-experiments-orchestrator```
 
-2. Install: ```pip install requirements.txt```
+- Install: ```pip install requirements.txt```
 
-3. Run: ```python3 main.py```
+- Run: ```python3 main.py```
+
+## Usage
+- Adjust agent parameters and configurations based on experimental requirements.
+- Use the Experiment Generation Agent to create customized experimental protocols.
+- Deploy the Experiment Execution Agent to carry out the experiments in the laboratory.
+- Leverage the Image Analysis Agent to process and analyze acquired experimental data.
+- Utilize the Information Retrieval Agent to access and retrieve experiment results.
+- Provide feedback through the designated channels to improve system performance.
