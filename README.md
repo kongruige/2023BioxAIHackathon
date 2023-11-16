@@ -14,11 +14,11 @@ BioVerse is an AI-powered virtual lab that simulates real-world biology research
 Additionally, the system facilitates continuous improvement by periodically gathering feedback from users. BioVerse aims to provide end-to-end support from early stages of research through publication. Users can pose problems, discuss experimental directions with the agents, collect resultant data, and receive computational analysis guidance. The goal is an autonomous and accessible virtual lab supporting open-ended life science research workflows.
 
 ## Team
- [Ananya Bhalla](https://www.linkedin.com/in/ananyabhalla/) - Team Lead & Bio Scientist (The Francis Crick Institute & Kings College)
-[Kosi Asuzu](https://www.linkedin.com/in/kosi-asuzu-793494190/) - AI/ML Engineer (Birmingham City University & Ivy)
-[Ruige Kong](https://www.linkedin.com/in/ruige-kong-6685611a3/) - AI/ML Engineer (University of Cambridge & European  Bioinformatics Institute)
-[Oliver Hernandez](https://www.linkedin.com/in/oliverhdez/) - Bio Scientist (Imperial College)
-[Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8/) - AI/NLP Scientist (Coconut Head)
+- [Ananya Bhalla](https://www.linkedin.com/in/ananyabhalla/) - Team Lead & Bio Scientist (The Francis Crick Institute & Kings College)
+- [Kosi Asuzu](https://www.linkedin.com/in/kosi-asuzu-793494190/) - AI/ML Engineer (Birmingham City University & Ivy)
+- [Ruige Kong](https://www.linkedin.com/in/ruige-kong-6685611a3/) - AI/ML Engineer (University of Cambridge & European  Bioinformatics Institute)
+- [Oliver Hernandez](https://www.linkedin.com/in/oliverhdez/) - Bio Scientist (Imperial College)
+- [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8/) - AI/NLP Scientist (Coconut Head)
 
 
 ## Usage
