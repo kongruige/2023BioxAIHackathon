@@ -1,12 +1,15 @@
-from bioresearchdev.utils import storeConversationMessage
-from bioresearchdev.research_chain import ResearchChain
-import logging
 import os
 import sys
+import logging
+import chromadb
+from bioverse import autogen
+from bioverse.bioresearchdev.utils import storeConversationMessage
+from bioverse.bioresearchdev.research_chain import ResearchChain
+from bioverse.autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
+from bioverse.autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 
 root = os.path.dirname(__file__)
 sys.path.append(root)
-
 
 def get_config():
     """
@@ -49,29 +52,13 @@ research_chain = ResearchChain(
     code_path="",
 )
 
-# set logging file
-# ----------------------------------------
-#          Init Log
-# ----------------------------------------
-# TODO: set the log filepath for the research chain
 logging.basicConfig(filename=research_chain.log_filepath, level=logging.INFO,
                     format='[%(asctime)s %(levelname)s] %(message)s',
                     datefmt='%Y-%d-%m %H:%M:%S', encoding="utf-8")
 
 
-# perform preprocessing
 research_chain.pre_processing()
-
-# research personel recruitment
 research_chain.make_recruitment()
-
-# execute research procdure chain
-# research_chain.execute_chain()
-
-import autogen
-from autogen.agentchat.contrib.retrieve_assistant_agent import RetrieveAssistantAgent
-from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
-import chromadb
 
 config_list = autogen.config_list_from_json(
     env_or_file="modelConfig.json",
@@ -102,7 +89,6 @@ termination_msg = lambda x: isinstance(x, dict) and "TERMINATE" == str(x.get("co
 
 max_token = 1000
 
-# define agents
 PI = autogen.UserProxyAgent(
     name="Principal_Investigator",
     is_termination_msg=termination_msg,
@@ -232,7 +218,6 @@ def rag_chat():
     )
     manager = autogen.GroupChatManager(groupchat=groupchat, llm_config=llm_config)
 
-    # Start chatting with boss_aid as this is the user proxy agent.
     PI_aid.initiate_chat(
         manager,
         problem=PROBLEM,
@@ -248,7 +233,6 @@ def norag_chat():
     )
     manager = autogen.GroupChatManager(groupchat=groupchat, llm_config=llm_config)
 
-    # Start chatting with boss as this is the user proxy agent.
     PI.initiate_chat(
         manager,
         message=PROBLEM,
@@ -322,10 +306,5 @@ def call_rag_chat():
         message=PROBLEM,
     )
 
-# begin chat
 print(norag_chat())
-
-# perform postprocessing
-# research_chain.post_processing()
-
 print("Working so far.....")
