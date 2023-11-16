@@ -1,6 +1,8 @@
 # BioVerse - Autonomous Virtual Biology Lab
 Welcome to the GitHub repository for BioVerse, an innovative project that earned a 4th place finish at the EF 2023 Bio x AI Hackathon. BioVerse represents a groundbreaking step in combining artificial intelligence with biology research, offering a comprehensive virtual lab experience.
 
+![Alt text](/images/logo.jpeg)
+
 ## Overview
 BioVerse is an AI-powered virtual lab that simulates real-world biology research workflows through multi-agent conversations. Users can pose problems and receive guided assistance across literature discovery, experimental design, computational analysis, and results interpretation and paper writing. The goal of BioVerse is to streamline and automate biology research through the coordination of specialised research agents. These agents cover various aspects of the experimental process, including:
 
@@ -51,4 +53,4 @@ Additionally, the system facilitates continuous improvement by periodically gath
 
 2. Install: ```pip install requirements.txt```
 
-3. Run: ```python3 run bioverse/run.py```
+3. Run: ```python3 main.py```
