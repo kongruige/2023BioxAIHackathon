@@ -20,9 +20,9 @@ Welcome to the GitHub repository for BioVerse, an innovative project that earned
 - Clone the repository: 
    ```bash
    git clone https://github.com/your-username/biology-experiments-orchestrator.git
-   cd biology-experiments-orchestrator```
+   cd 2023BioxAIHackathon```
 
-- Install: ```pip install requirements.txt```
+- Install: ```pip install -r requirements.txt```
 
 - Run: ```python3 main.py```
 
