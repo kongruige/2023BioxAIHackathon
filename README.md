@@ -3,7 +3,7 @@
 Welcome to the GitHub repository for BioVerse, an innovative project that earned a 4th place finish at the EF 2023 Bio x AI Hackathon. BioVerse represents a groundbreaking step in combining artificial intelligence with biology research, offering a comprehensive virtual lab experience. BioVerse simulates real-world biology research workflows through multi-agent conversations. Users can pose problems and receive guided assistance across literature discovery, experimental design, computational analysis, and results interpretation and paper writing. BioVerse's aim is to automate and streamline biology research by coordinating specialized research agents, while continuously improving through user feedback. It supports the entire research journey, from initial problem formulation to publication, offering guidance in experimental strategies, data collection, and computational analysis. BioVerse represents an innovative, accessible virtual lab for comprehensive life science research.
 
 ## Team
-- [Ananya Bhalla](https://www.linkedin.com/in/ananyabhalla/) - Team Lead & Bio Scientist (The Francis Crick Institute & Kings College)
+- [Ananya Bhalla](https://www.linkedin.com/in/ananyabhalla/) - Team Lead & Bio Scientist (The Francis Crick Institute & King's College London)
 - [Kosi Asuzu](https://www.linkedin.com/in/kosi-asuzu-793494190/) - AI/ML Engineer (Birmingham City University & Ivy)
 - [Ruige Kong](https://www.linkedin.com/in/ruige-kong-6685611a3/) - AI/ML Engineer (University of Cambridge & European  Bioinformatics Institute)
 - [Oliver Hernandez](https://www.linkedin.com/in/oliverhdez/) - Bio Scientist (Imperial College)
@@ -20,7 +20,8 @@ Welcome to the GitHub repository for BioVerse, an innovative project that earned
 - Clone the repository: 
    ```bash
    git clone https://github.com/your-username/biology-experiments-orchestrator.git
-   cd 2023BioxAIHackathon```
+   cd 2023BioxAIHackathon
+   ```
 
 - Install: ```pip install -r requirements.txt```
 
